@@ -72,8 +72,25 @@ You only create custom routes if needed.
 
 When creating a VPC in GCP, you choose:
 
-- Auto mode or Custom mode  
+- Auto mode or Custom mode
+
+    **Auto Mode VPC (legacy)**
+
+    - GCP automatically creates subnets in each region.
+
+    **Custom Mode VPC (recommended)**
+
+    - You manually create subnets in each region.  
+    - Gives more control over IP ranges and network design.
+     
 - Subnet IP ranges  
 - Firewall rules (allow HTTP/HTTPS/SSH)
   
 Internet access and routing are already there by default.
+
+# 5️⃣ Why VPC?
+
+**Isolation** – your cloud resources are on a private network.  
+**Control** – define IP ranges, firewall rules, and routes.   
+**Security** – control which resources can talk to each other or the internet.  
+**Connectivity** – easily connect VPCs, on-prem networks, and services.
