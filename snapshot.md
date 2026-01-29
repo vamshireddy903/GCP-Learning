@@ -1,6 +1,7 @@
+# Snapshot
 A snapshot is a point-in-time backup of a disk (not the whole VM).
 
-It captures only disk data.
+- It captures only disk data.
 
 One-line definition
 
@@ -13,7 +14,7 @@ Snapshot = backup of a persistent disk at a specific time
 -  Data inside the disk  
 -  File system state
 
-**What snapshot does NOT include **
+**What snapshot does NOT include**
 
 - VM settings  
 -  Machine type  
