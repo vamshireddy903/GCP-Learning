@@ -115,3 +115,12 @@ role: roles/editor
 ```
 
 ✅ Result: Alice, Bob, and Charlie all get editor access automatically.
+
+# IAM Deny Policy
+
+ - With deny policies, you can define deny rules that prevent certain principals from sing certain permission, regardless of roles they're granted  
+ - Deny policies are used to implement explicit denial of access, even if other IAM policies grant access.  
+ - They are particularly useful for enforcing security boundaries and ensuring that certain actions can't be performed by specific users or groups under any circumstances.  
+ - IAM deny policies take precedence over allow policies. If a deny rule explicitly denies a permission to principal, that principal can't perform the action, even if other policies grant it.  
+ - To view, update and delete deny policies: Deny Admin(roles/iam.denyAdmin)
+ 
