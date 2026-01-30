@@ -81,3 +81,8 @@ Examples:
 📈 Auto-scaling & managed services  
 - Scalability: Handling 10 users or 10 million users without buying new servers.
 
+# Migration Process
+
+Migrate to Virtual Machines lets you migrate (Lift and shift) your virtual machines (VMs), with minor automatic modifications, from your source environment to Compute Engine. Migrate to Virtual Machines uses data replication technology which continuously replicates disk data from the source VMs to Google Cloud without causing any downtime on the source. You then create VM clones from replicated data for testing and perform predictable VM cut-over to your final workloads running on Google Cloud.
+
+
