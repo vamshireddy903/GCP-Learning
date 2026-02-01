@@ -32,6 +32,19 @@ It defines:
 
 - As your company grows, hierarchy makes it easy to add projects, teams, and resources without breaking access rules.
 
+**Billing & cost control**
+
+Billing accounts are linked to projects, but hierarchy helps:
+
+- Group projects by department  
+- Track cost per folder  
+- Apply budgets & alerts
+
+Example:
+
+- Folder = Marketing  
+- All marketing projects roll up costs automatically
+
 **Organization (Top level)**
 
 - Represents your company or organization in GCP.  
