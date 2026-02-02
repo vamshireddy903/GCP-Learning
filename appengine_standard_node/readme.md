@@ -17,3 +17,7 @@
 6 Deploy your web application
 
      gcloud app deploy
+     
+7 To check the versions
+
+     gcloud app versions list
