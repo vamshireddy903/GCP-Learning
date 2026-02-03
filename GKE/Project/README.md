@@ -3,7 +3,7 @@
 In this Kubernetes project, we will learn how to deploy a multi microservice architectured application.
 
 - Code for the application
-https://github.com/dockersamples/example-voting-app
+https://github.com/vamshireddy903/k8s-voting-app-project.git
 
 <img width="860" height="800" alt="architecture excalidraw" src="https://github.com/user-attachments/assets/581a965f-3185-4f30-902f-0f3232d1fe9a" />
 
