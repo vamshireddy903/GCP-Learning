@@ -45,9 +45,15 @@ gcloud config set project YOUR_PROJECT_ID
 
 Make sure you have created artifact registry in the gcp
 
-    docker build -t asia-south1-docker.pkg.dev/vamshi-project-486305/demo:v1 .
+    docker build -t asia-south1-docker.pkg.dev/vamshi-project-486305/demo/<image-name>:v1 .
 
 **4. Push image to the artifact registry**
 
-    docker pus asia-south1-docker.pkg.dev/vamshi-project-486305/demo:v1
+    docker pus asia-south1-docker.pkg.dev/vamshi-project-486305/demo<image-name>:v1
+
+You will get this from artifcat repo once you create:
+
+click repo and copy path: you see this: asia-south1-docker.pkg.dev/vamshi-project-486305/demo
+
+
 
