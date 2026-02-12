@@ -1,22 +1,31 @@
 import os
+from google.cloud import storage
 
+BUCKET_NAME = "your-bucket-name"   # change this
 INPUT_FILE = "input.txt"
 OUTPUT_FILE = "output.txt"
 
 def main():
-    if not os.path.exists(INPUT_FILE):
-        print("Input file not found!")
+    client = storage.Client()
+    bucket = client.bucket(BUCKET_NAME)
+
+    # Download input file from GCS
+    input_blob = bucket.blob(INPUT_FILE)
+
+    if not input_blob.exists():
+        print("Input file not found in Cloud Storage!")
         return
 
-    with open(INPUT_FILE, "r") as f:
-        lines = f.readlines()
-
+    content = input_blob.download_as_text()
+    lines = content.splitlines()
     count = len(lines)
 
-    with open(OUTPUT_FILE, "w") as f:
-        f.write(f"Total lines: {count}")
+    # Upload output file to GCS
+    output_blob = bucket.blob(OUTPUT_FILE)
+    output_blob.upload_from_string(f"Total lines: {count}")
 
     print(f"Processed file. Total lines: {count}")
+    print("Output uploaded to Cloud Storage.")
 
 if __name__ == "__main__":
     main()
