@@ -1,31 +1,27 @@
 import os
-from google.cloud import storage
+import logging
 
-BUCKET_NAME = "your-bucket-name"   # change this
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+
 INPUT_FILE = "input.txt"
-OUTPUT_FILE = "output.txt"
 
 def main():
-    client = storage.Client()
-    bucket = client.bucket(BUCKET_NAME)
+    logging.info("Job started")
 
-    # Download input file from GCS
-    input_blob = bucket.blob(INPUT_FILE)
-
-    if not input_blob.exists():
-        print("Input file not found in Cloud Storage!")
+    # Check if file exists
+    if not os.path.exists(INPUT_FILE):
+        logging.error("Input file not found!")
         return
 
-    content = input_blob.download_as_text()
-    lines = content.splitlines()
+    # Read file
+    with open(INPUT_FILE, "r") as f:
+        lines = f.readlines()
+
     count = len(lines)
 
-    # Upload output file to GCS
-    output_blob = bucket.blob(OUTPUT_FILE)
-    output_blob.upload_from_string(f"Total lines: {count}")
-
-    print(f"Processed file. Total lines: {count}")
-    print("Output uploaded to Cloud Storage.")
+    logging.info(f"Total lines in file: {count}")
+    logging.info("Job completed successfully")
 
 if __name__ == "__main__":
     main()
