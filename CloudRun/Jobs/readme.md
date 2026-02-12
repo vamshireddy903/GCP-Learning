@@ -5,8 +5,7 @@ You have an application generating logs.
 
 **Every night:**
 - Read a log file  
-- Count number of lines  
-- Save result to output file  
+- Count number of lines to console
 - Exit
 
 This is a perfect Cloud Run Job use case because:
